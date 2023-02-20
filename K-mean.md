@@ -38,9 +38,9 @@ How to choose K?
 1. Try different values of K
 2. Calculate the WCSS(within-cluster-sum-of-square)
 3. Choose the K that reduce WCSS the most
+   Y軸是total variation
 
 ![1676871052377](image/K-mean/1676871052377.png)
-
 
 #### **K-means 運作的流程步驟：**
 
@@ -58,21 +58,39 @@ K-means 演算法的時間複雜度為 O(NKT) ， 其中：N 為資料的數量�
 1. K-means often does not produce the perfect because it start from not perfect start points.
 2. Clustering result is very sensitive to the starting points.
 
-方法: 
+方法:
 
 1. To solve this issue we can repeat the process step 1-6 and calculate the total variation and choose the lowest one.
+2. Use K-means++ to calculate the starting points.
+
+### 1.2.2 K-means++
+
+K-Means 有一個缺點是分群的結果會因初始點而有所影響，我們希望不要讓分群的結果太糟糕，所以使用了改良過的 K-Means++。K-Means++ 即是針對中心點初始化而做了改良，其思想是讓 **初始化的中心點相距越大越好** 。K-means跟K-means++只有差在初始值的設定。
+
+Instead of randomly initially centorids:
+
+1. randomly choose point j in X to be $u_1$
+2. calculate the distance($u_1$,$x_j$)
+3. choose $u_2$ from $x_j$ with probability proportional to distance, and the points further away are more likely to be selected as centorids
+   $ 1/ 1-dist(u_j,x_j)$
+
+逐一設定 K 個群集中心。計算每一個點到已設定的群集中心的最短距離，以最短距離的 n 次方作為機率大小，決定下一個群集中心。距離越遠，機率越大。
+
+0 次方是 K-Means ，等同隨機散佈。 2 次方是 K-Means++ 。 ∞ 次方是 Farthest-point Traversal ，等同找最遠點。次方越高，效果越好，計算越久。
+
+優點是群集中心比較分散，不容易擠在一起。
 
 #### 面試題目:
 
 Q: How is K-means clustering different from hierarchial clustering?
 A: K-means tries to put all the data into K clusters that you tell it to.
-Hierarchial clustering just tell you what the two most simarliar data. 
+Hierarchial clustering just tell you what the two most simarliar data.
 
 Q: What if our data isn't in only one diemension?
-A: Pick the random K points in the beginning, and use the Euclidean distance. And then assign point to the nearest cluster. 
+A: Pick the random K points in the beginning, and use the Euclidean distance. And then assign point to the nearest cluster.
 
 Q: What if my data is a heatmap?
-A: If we just have two cols, we can rename them as X and Y and calculate the distance in the coordinate system. 
+A: If we just have two cols, we can rename them as X and Y and calculate the distance in the coordinate system.
 
 $$
 \sqrt{a^2+b^2+c^2+d^2+...}
