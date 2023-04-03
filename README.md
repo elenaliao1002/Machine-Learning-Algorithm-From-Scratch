@@ -8,7 +8,7 @@ Supervised learning is a type of machine learning which the algorithm learns fro
 
 ## Regularization
 
-Motivation for [regularization]():
+Motivation for [regularization](https://github.com/elenaliao1002/Machine-Learning-Algorithm-From-Scratch/tree/main/LinearRegression):
 
 1. Model with too many parameters will overly complex and might overfit
 2. Outliers can skew line and cause bad generalization
@@ -180,7 +180,7 @@ Each parameter's learning rate η is dividing by the square root of the sum of t
 
 ## Naïve Bayes
 
-[Naïve Bayes](https://github.com/ajinChen/machine-learning-from-scratch/blob/main/Na%C3%AFveBayes/bayes.py) model is based on the Bayes' theorem under the naïve assumption: conditional independence. In this assumption, we don't consider the order of the words (if we don't use this assumption, we need to consider all combinations (relation) for n words, which grow exponentially with length n)
+[Naïve Bayes]() model is based on the Bayes' theorem under the naïve assumption: conditional independence. In this assumption, we don't consider the order of the words (if we don't use this assumption, we need to consider all combinations (relation) for n words, which grow exponentially with length n)
 
 <img src="images/bayes.png" width="200" style="padding-top:5px">
 
