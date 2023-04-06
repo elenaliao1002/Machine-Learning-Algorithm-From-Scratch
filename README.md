@@ -1,6 +1,11 @@
 # Machine Learning Implementation from scratch
 
+## Repo goal 
+
 Using libraries like Sklearn make it easy to create machine learning models, but they can also hinder learning by hiding the inner workings of the models. To gain a deeper understanding of how these models function, it's important to build them from scratch. That's what this repository aims to do by explaining the concepts behind various models, both supervised and unsupervised, and providing code implementations using clear and easy-to-understand language.In this repo, I will show the theory of different models, including supervised learning and unsupervised learning, and implement these models from scratch.
+
+Thanks to Prof. Robert Clements for his guidance. 
+
 
 ## Supervised Learning Algorithm
 
