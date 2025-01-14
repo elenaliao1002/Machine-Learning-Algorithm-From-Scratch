@@ -9,7 +9,7 @@ Thanks to Prof. Robert Clements for his guidance.
 
 ## Supervised Learning Algorithm
 
-Supervised learning is a type of machine learning which the algorithm learns from labeled data, helps you to predict outcomes for unforeseen data. The goal is for the algorithm to learn the relationship between the input data and the labeled output data, so that it can accurately predict the output for new, unseen input data. Examples of supervised learning include classification problems, such as image recognition, and regression problems, such as predicting housing prices.It means some data is already tagged with the correct answer and seems like in the presence of a supervisor or a teache
+Supervised learning is a type of machine learning which the algorithm learns from labeled data, helps you to predict outcomes for unforeseen data. The goal is for the algorithm to learn the relationship between the input data and the labeled output data, so that it can accurately predict the output for new, unseen input data. Examples of supervised learning include classification problems, such as image recognition, and regression problems, such as predicting housing prices.It means some data is already tagged with the correct answer and seems like in the presence of a supervisor or a teacher.
 
 ## Regularization
 
